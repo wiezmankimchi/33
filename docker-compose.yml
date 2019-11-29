@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  '33':
+    build: ./
+    volumes:
+    - './:/usr/src/app'
+    - '/usr/src/app/node_modules'
+    ports:
+      - "3333:3000"
+    environment:
+      - NODE_ENV=development
+      - REACT_APP_AUTHOR=wiezmankimchi
+      - REACT_APP_VER=1.02
